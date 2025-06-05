@@ -9,7 +9,7 @@ export function startREPL(state: State) {
 
     rl.prompt();
 
-    rl.on('line', (rawLine: string) => {
+    rl.on('line', async (rawLine: string) => {
         const words = cleanInput(rawLine);
 
         if (words.length === 0 || words[0] === '') {
@@ -22,7 +22,7 @@ export function startREPL(state: State) {
 
         if (command) {
             try {
-                command.callback(state);
+                await command.callback(state);
             } catch (error) {
                 console.log(`Error executing command: ${commandName}`);
             }
