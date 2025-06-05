@@ -1,0 +1,23 @@
+{
+  "name": "ts-pokedex",
+  "version": "1.0.0",
+  "description": "Pokedex CLI",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "dev": "tsc && node dist/main.js",
+    "test": "vitest --run",
+    "format": "prettier --write \"src/**/*\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.15.29",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.1"
+  }
+}
