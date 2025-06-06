@@ -8,6 +8,7 @@ import { commandExplore } from './command_explore.js';
 import { commandCatch } from './command_catch.js';
 import type { Pokemon } from './pokeapi.js';
 import { commandInspect } from './command_inspect.js';
+import { commandPokedex } from './command_pokedex.js';
 
 export type CLICommand = {
     name: string;
@@ -66,6 +67,11 @@ export function initState(): State {
             name: 'inspect',
             description: 'Inspect a pokemon',
             callback: commandInspect,
+        },
+        pokedex: {
+            name: 'pokedex',
+            description: 'Display the pokedex',
+            callback: commandPokedex,
         },
     };
 
