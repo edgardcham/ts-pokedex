@@ -102,4 +102,6 @@ export type Pokemon = {
     weight: number;
     abilities: any[];
     forms: any[];
+    stats: any[];
+    types: any[];
 };
