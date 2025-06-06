@@ -15,6 +15,9 @@ export async function commandExplore(
         response.pokemon_encounters.forEach((encounter) => {
             console.log(`- ${encounter.pokemon.name}`);
         });
+        state.currentLocationPokemon = response.pokemon_encounters.map(
+            (encounter) => encounter.pokemon.name,
+        );
     } catch (error) {
         console.log(`Error fetching location: ${error}`);
     }
