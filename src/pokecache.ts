@@ -1,7 +1,7 @@
 export type CacheEntry<T> = {
     createdAt: number;
     val: T;
-}
+};
 
 export class Cache {
     #cache = new Map<string, CacheEntry<any>>();
@@ -12,7 +12,6 @@ export class Cache {
         this.#interval = interval;
         this.#startReapLoop();
     }
-
 
     add<T>(key: string, val: T): void {
         this.#cache.set(key, {
